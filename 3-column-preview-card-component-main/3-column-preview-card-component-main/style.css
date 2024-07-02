@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%);
+
+}
+
+body {
+    height: 100vh;
+    font-size: 15px;
+    /* block, inline*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Verylightgray);
+}
+
+main {
+    max-width: 1000px;
+    width: 1100px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*pega todos os filhos da main e o flex faz com que cresçam por iguais  */
+main>* {
+    flex: 1;
+}
+
+/* somente nas divs filhas da main */
+main>div {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    /*espaçamento*/
+    gap: 2rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--Verylightgray);
+    font-family: "Big Shoulders Display ", sans-serif;
+    font-weight: 700;
+}
+
+p {
+    color: var(--Transparentwhite);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+}
+
+.sedan {
+    background-color: var(--Brightorange);
+}
+
+.luxury {
+    background-color: var(--Verydarkcyan);
+}
+
+.suv {
+    background-color: var(--Darkcyan);
+}
+
+a {
+    text-decoration: none;
+    color: var(--Verylightgray);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 500;
+    border: 2px solid var(--Verylightgray);
+    border-radius: 20px;
+    padding: 10px 15px;
+    display: inline;
+    align-self: flex-start;
+}
